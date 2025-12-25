@@ -1,10 +1,10 @@
 import React from "react";
-import { CheckCircle2, ArrowUpRight } from "lucide-react";
+import { CheckCircle2, ArrowUpRight, ArrowRight } from "lucide-react";
 import { twMerge } from "tailwind-merge";
+import { Link } from "react-router-dom"; // 1. Import Link
 import projectsData from "../../assets/projects/projects.json";
 
 // Import your grain texture image here
-// In standard React/Vite, this import returns the string path
 import grainImage from "../../assets/img/grain.jpg";
 
 const HomeProjects = () => {
@@ -28,7 +28,7 @@ const HomeProjects = () => {
         {/* --- INLINED SECTION HEADER END --- */}
 
         <div className="flex flex-col gap-20 mt-10 md:mt-20">
-          {projectsData.map((project, projectIndex) => (
+          {projectsData.slice(0, 5).map((project, projectIndex) => (
             /* --- INLINED CARD START --- */
             <div
               key={project.id}
@@ -107,6 +107,18 @@ const HomeProjects = () => {
             /* --- INLINED CARD END --- */
           ))}
         </div>
+
+        {/* --- VIEW MORE BUTTON START --- */}
+        <div className="mt-20 flex justify-center">
+          <Link
+            to="/projects"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-950 px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg hover:scale-105 transition-all duration-300"
+          >
+            <span>View All Projects</span>
+            <ArrowRight className="size-5" />
+          </Link>
+        </div>
+        {/* --- VIEW MORE BUTTON END --- */}
       </div>
     </section>
   );
