@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@plugin "daisyui";
+/* Global Color Variables 
+  PREFIX: --brand- for static brand colors
+  PREFIX: --theme- for colors that swap in dark/light mode
+*/
+:root {
+  /* --- STATIC BRAND COLORS (Stay the same in both modes) --- */
+  --brand-primary: #3b82f6;
+  /* Logic Blue */
+  --brand-accent: #06b6d4;
+  /* Neon Cyan */
+  --brand-secondary: #4338ca;
+  /* Code Indigo */
+
+  /* --- LIGHT MODE (Default) --- */
+  --theme-bg: #f8fafc;
+  /* Very light slate */
+  --theme-bg-card: #ffffff;
+  /* Pure white for cards */
+  --theme-text-main: #0f172a;
+  /* Deep Void (Dark text) */
+  --theme-text-muted: #475569;
+  /* Slate 600 */
+  --theme-border: #e2e8f0;
+  /* Light border */
+
+  /* Gradients often need specific tweaks per mode, 
+     but here we define a 'surface' gradient variable */
+  --gradient-surface: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+/* --- DARK MODE OVERRIDES --- */
+/* Add class="dark" to your HTML or Body tag to trigger this */
+[data-theme='dark'] {
+  --theme-bg: #0f172a;
+  /* Deep Void (Main Background) */
+  --theme-bg-card: #1e293b;
+  /* Slate 800 (Card Background) */
+  --theme-text-main: #f8fafc;
+  /* Glacier White (Light text) */
+  --theme-text-muted: #94a3b8;
+  /* Slate 400 */
+  --theme-border: #334155;
+  /* Dark border */
+
+  --gradient-surface: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+/* --- CUSTOM GRADIENT CLASSES --- */
+
+/* 1. Hero Gradient: High energy, main headers */
+.grad-hero {
+  background: linear-gradient(90deg, var(--brand-secondary) 0%, var(--brand-primary) 50%, var(--brand-accent) 100%);
+}
+
+/* 2. Text Gradient: Makes text look metallic/glowing */
+.grad-text {
+  background: linear-gradient(to right, var(--brand-primary), var(--brand-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 3. Card/Surface Gradient: Subtle background for divs */
+.grad-surface {
+  background: var(--gradient-surface);
+}
+
+/* 4. Glow Hover Effect: Good for buttons */
+.grad-glow:hover {
+  box-shadow: 0 0 15px var(--brand-primary);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+@layer components {
+  .hero-ring {
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[var(--theme-border)]/30 shadow-[0_0_20px_inset] shadow-[var(--theme-border)]/10;
+  }
+}
