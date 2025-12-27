@@ -5,13 +5,9 @@ import Root from "../layout/Root";
 import Home from "../pages/Home";
 import Contact from "../pages/Contact";
 import Projects from "../pages/Projects";
-<<<<<<< HEAD
 import Blog from "../pages/Blog";
 import Services from "../pages/Services";
 import Reviews from "../pages/Reviews";
-=======
-import About from "../pages/About";
->>>>>>> e1aeb1b2c417692e594e534864b374a658e25d5d
 
 const Routes = createBrowserRouter([
     {
@@ -32,7 +28,6 @@ const Routes = createBrowserRouter([
                 element: <Projects></Projects>
             },
             {
-<<<<<<< HEAD
                 path: "blog",
                 element: <Blog></Blog>
             },
@@ -44,11 +39,6 @@ const Routes = createBrowserRouter([
                 path: "reviews",
                 element: <Reviews></Reviews>
             }
-=======
-                path: "about",
-                element: <About></About>
-            },
->>>>>>> e1aeb1b2c417692e594e534864b374a658e25d5d
         ]
     }
 ])
