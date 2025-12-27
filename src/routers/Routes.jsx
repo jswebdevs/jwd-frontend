@@ -8,7 +8,6 @@ import Projects from "../pages/Projects";
 import Blog from "../pages/Blog";
 import Services from "../pages/Services";
 import Reviews from "../pages/Reviews";
-import About from "../pages/About";
 
 
 const Routes = createBrowserRouter([
