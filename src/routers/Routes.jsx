@@ -8,7 +8,8 @@ import Projects from "../pages/Projects";
 import Blog from "../pages/Blog";
 import Services from "../pages/Services";
 import Reviews from "../pages/Reviews";
-import About from "../pages/About";
+import About from "../pages/About"
+
 
 const Routes = createBrowserRouter([
     {
@@ -18,11 +19,11 @@ const Routes = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Home/>
+                element: <Home/>,
             },
             {
                 path: "contact",
-                element: <Contact></Contact>
+                element: <Contact></Contact>,
             },
             {
                 path: "projects",
@@ -40,10 +41,10 @@ const Routes = createBrowserRouter([
                 path: "reviews",
                 element: <Reviews></Reviews>
             },
-            {
-                path: "about",
-                element: <About></About>
-            }
+          {
+            path: "about",
+            element: <About></About>
+          }
         ]
     }
 ])
