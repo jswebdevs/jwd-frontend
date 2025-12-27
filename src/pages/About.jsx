@@ -104,21 +104,33 @@ const AboutPage = () => {
           >
             <div className="absolute inset-0 bg-teal-500 rounded-3xl opacity-20 transition-transform duration-500 blur-xl"></div>
             
-            {/* CHANGE 2: Card using theme variables */}
-            <div className="relative bg-[var(--theme-bg)] border border-[var(--theme-border)] p-3 rounded-3xl shadow-2xl transition-transform duration-500">
-               <div className="aspect-[4/5] bg-[var(--theme-text-main)]/5 rounded-2xl overflow-hidden relative">
-                  <img 
+            {/* Card structure */}
+            <div className="relative bg-[var(--theme-bg)] border border-[var(--theme-border)] p-3 rounded-3xl shadow-2xl">
+               
+               {/* === ANIMATION UPDATED HERE === */}
+               {/* The Frame Container: Now this part scales up */}
+               <motion.div 
+                 className="aspect-[4/5] bg-[var(--theme-text-main)]/5 rounded-2xl overflow-hidden relative"
+                 whileHover={{ scale: 1.03 }} // Frame gets 3% bigger on hover
+                 transition={{ duration: 0.3, ease: "easeOut" }}
+               >
+                  {/* Standard Image inside (No independent animation) */}
+                  <img
                     src={jamilImg} 
                     alt="Profile" 
-                    className="w-full h-full object-cover transition-all duration-700"
+                    className="w-full h-full object-cover"
                   />
                   
-                  {/* Floating Badge */}
-                  <div className="absolute bottom-4 right-4 bg-[var(--theme-bg)]/80 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-[var(--theme-border)]">
+                  {/* Floating Badge (No independent animation, scales with parent) */}
+                  <div 
+                    className="absolute bottom-4 right-4 bg-[var(--theme-bg)]/80 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-[var(--theme-border)]"
+                  >
                     <div className="text-2xl font-bold text-teal-500">3+ Years</div>
                     <div className="text-xs font-semibold uppercase tracking-wider text-[var(--theme-text-main)]">Experience</div>
                   </div>
-               </div>
+               </motion.div>
+               {/* === ANIMATION END === */}
+
             </div>
           </motion.div>
 
