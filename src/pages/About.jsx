@@ -11,7 +11,7 @@ import jamilImg from "../assets/img/jamil.png";
 import nagibImg from "../assets/img/nagib.png";
 import siyamImg from "../assets/img/siyam.png";
 
-const AboutPage = () => {
+const About = () => {
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -291,4 +291,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default About;
