@@ -1,6 +1,7 @@
 [
   {
-    "id": 1,
+    "sortOrder": 0,
+    "isFeatured": true,
     "company": "Vertex Quiz Platform",
     "year": "2024",
     "title": "Educational Platform for BCS Candidates",
@@ -11,11 +12,14 @@
       "High concurrent traffic management"
     ],
     "link": "https://vertexforbcs.org",
-    "image": "/images/vertex-quiz-platform.png",
+    "image": "file:///D:/JS%20Web%20Devs/jswebdevs.com/backend/uploads/projects/rac.png",
     "techStack": ["MongoDB", "Express", "React", "Node.js"],
     "details": "Developed a dynamic educational platform for BCS candidates featuring real-time quiz functionality, user progress tracking, and secure authentication. Engineered a responsive UI to manage high concurrent user traffic during exams."
   },
   {
+    "_id": "695021e684c51190eb5fa4cf",
+    "sortOrder": 0,
+    "isFeatured": true,
     "id": 2,
     "company": "Raj Property",
     "year": "2025",
@@ -39,6 +43,9 @@
     "details": "Architecting a scalable Real Estate Marketplace allowing users to list, search, and filter properties. Implementing advanced database schemas for property attributes and a custom dashboard for agents and buyers."
   },
   {
+    "_id": "695021e684c51190eb5fa4d0",
+    "sortOrder": 0,
+    "isFeatured": true,
     "id": 3,
     "company": "Weblasser Ecosystem",
     "year": "2024",
@@ -55,6 +62,9 @@
     "details": "Led the development of a corporate website and collaborated on a team to build a custom Point of Sale (POS) and SaaS solution. Integrated complex data flows between the marketing site and the internal software tools."
   },
   {
+    "_id": "695021e684c51190eb5fa4d1",
+    "sortOrder": 0,
+    "isFeatured": true,
     "id": 4,
     "company": "RAM IT Agency",
     "year": "2024",
@@ -71,6 +81,9 @@
     "details": "Built a high-performance Single Page Application (SPA) for a digital agency, focusing on rapid load times, component reusability, and a modern, tech-forward aesthetic."
   },
   {
+    "_id": "695021e684c51190eb5fa4d2",
+    "sortOrder": 0,
+    "isFeatured": true,
     "id": 5,
     "company": "Philip Karto Luxury Store",
     "year": "2024",
@@ -87,6 +100,9 @@
     "details": "Developed a bespoke e-commerce experience for a luxury brand. Moved beyond page builders to code a Custom WordPress Theme, ensuring pixel-perfect design compliance and optimized checkout flows."
   },
   {
+    "_id": "695021e684c51190eb5fa4d3",
+    "sortOrder": 0,
+    "isFeatured": true,
     "id": 6,
     "company": "Gae-Du Aggregator",
     "year": "2024",
@@ -103,6 +119,9 @@
     "details": "A hybrid content platform featuring a custom Python integration to parse and generate custom RSS feeds, automating content aggregation from various sources into a unified user interface."
   },
   {
+    "_id": "695021e684c51190eb5fa4d4",
+    "sortOrder": 0,
+    "isFeatured": true,
     "id": 7,
     "company": "VL Strategies",
     "year": "2024",
@@ -119,6 +138,9 @@
     "details": "Built a secure \"Digital Vault\" and membership platform. Implemented gated content, tiered subscription levels, and recurring billing integrations for digital asset sales."
   },
   {
+    "_id": "695021e684c51190eb5fa4d5",
+    "sortOrder": 0,
+    "isFeatured": true,
     "id": 8,
     "company": "Rent Spot 24",
     "year": "2024",
@@ -135,6 +157,9 @@
     "details": "Created a car rental marketplace with advanced filtering and booking calendars, allowing users to reserve vehicles based on availability and location."
   },
   {
+    "_id": "695021e684c51190eb5fa4d6",
+    "sortOrder": 0,
+    "isFeatured": true,
     "id": 9,
     "company": "Raj Travels",
     "year": "2024",
@@ -151,6 +176,9 @@
     "details": "Developed a travel agency portal with integrated tour booking features and dynamic itinerary displays."
   },
   {
+    "_id": "695021e684c51190eb5fa4d7",
+    "sortOrder": 0,
+    "isFeatured": true,
     "id": 10,
     "company": "Raj Admission",
     "year": "2024",
@@ -167,6 +195,9 @@
     "details": "Designed a study-abroad consultancy platform focused on lead generation and student information architecture."
   },
   {
+    "_id": "695021e684c51190eb5fa4d8",
+    "sortOrder": 0,
+    "isFeatured": true,
     "id": 11,
     "company": "WikiSEO",
     "year": "2024",
@@ -183,6 +214,9 @@
     "details": "Built a professional B2B service website for an IT agency, optimized for SEO and conversion rates."
   },
   {
+    "_id": "695021e684c51190eb5fa4d9",
+    "sortOrder": 0,
+    "isFeatured": true,
     "id": 12,
     "company": "Latif Agro",
     "year": "2024",
@@ -199,6 +233,9 @@
     "details": "Delivered an agricultural business portfolio showcasing products and services with a clean, corporate layout."
   },
   {
+    "_id": "695021e684c51190eb5fa4da",
+    "sortOrder": 0,
+    "isFeatured": true,
     "id": 13,
     "company": "Rajseba Design",
     "year": "2024",
@@ -215,6 +252,9 @@
     "details": "A visual-heavy portfolio site for interior/exterior design, optimizing high-res image galleries for fast loading."
   },
   {
+    "_id": "695021e684c51190eb5fa4db",
+    "sortOrder": 0,
+    "isFeatured": true,
     "id": 14,
     "company": "Rakesh Datta",
     "year": "2024",
@@ -231,6 +271,9 @@
     "details": "Personal branding portfolio emphasizing typography and personal narrative."
   },
   {
+    "_id": "695021e684c51190eb5fa4dc",
+    "sortOrder": 0,
+    "isFeatured": true,
     "id": 15,
     "company": "Pest Control Rajshahi",
     "year": "2025",
@@ -247,6 +290,9 @@
     "details": "Spearheading the complete modernization of a local service platform. Migrating from a legacy stack to Breakdance Builder to achieve sub-second load times and a mobile-first architecture, directly aimed at increasing service inquiry conversions."
   },
   {
+    "_id": "695021e684c51190eb5fa4dd",
+    "sortOrder": 0,
+    "isFeatured": true,
     "id": 16,
     "company": "Seba Rajshahi",
     "year": "2025",
@@ -263,6 +309,9 @@
     "details": "Executing a strategic overhaul of a multi-service agency website. Leveraging Breakdance’s lean code output to replace bloated page builders, creating a lightweight, SEO-friendly structure that enhances visibility in local search rankings."
   },
   {
+    "_id": "695021e684c51190eb5fa4de",
+    "sortOrder": 0,
+    "isFeatured": true,
     "id": 17,
     "company": "Friends Laundry BD",
     "year": "2025",
@@ -279,6 +328,9 @@
     "details": "Revamping the user interface for a laundry service provider to improve customer retention. Utilizing Breakdance to design a clutter-free, intuitive navigation flow that simplifies the service booking process across all devices."
   },
   {
+    "_id": "695021e684c51190eb5fa4df",
+    "sortOrder": 0,
+    "isFeatured": true,
     "id": 18,
     "company": "Agrunique",
     "year": "2024",
@@ -293,68 +345,5 @@
     "image": "/images/agrunique.png",
     "techStack": ["WordPress", "Breakdance Builder", "Dynamic Data"],
     "details": "Establishing the digital brand identity for an emerging agricultural enterprise. Designing a trust-driven, visual-heavy interface using Breakdance to highlight premium agro-products, integrating social media feeds to leverage community trust and social proof."
-  },
-  {
-    "id": 19,
-    "company": "Rajshahi University of Engineering and Technology",
-    "year": "2025",
-    "title": "B.Sc. in Computer Science and Engineering",
-    "slug": "ruet-education",
-    "results": ["CGPA: 2.59", "Rajshahi, Bangladesh"],
-    "link": "#",
-    "image": "/images/ruet-logo.png",
-    "techStack": ["Education", "B.Sc.", "CSE"],
-    "details": "Completed Bachelor of Science in Computer Science and Engineering from Rajshahi University of Engineering and Technology (RUET)."
-  },
-  {
-    "id": 20,
-    "company": "Notre Dame College, Dhaka",
-    "year": "2016",
-    "title": "Higher Secondary Certificate (HSC)",
-    "slug": "notre-dame-college",
-    "results": ["GPA: 5.00", "Dhaka Board", "Group: Science"],
-    "link": "#",
-    "image": "/images/ndc-logo.png",
-    "techStack": ["Education", "HSC", "Science"],
-    "details": "Completed Higher Secondary Certificate from the prestigious Notre Dame College, Dhaka."
-  },
-  {
-    "id": 21,
-    "company": "Rajuk Uttara Model College",
-    "year": "2014",
-    "title": "Secondary School Certificate (SSC)",
-    "slug": "rajuk-uttara-model-college",
-    "results": ["GPA: 5.00", "Dhaka Board", "Group: Science"],
-    "link": "#",
-    "image": "/images/rajuk-logo.png",
-    "techStack": ["Education", "SSC", "Science"],
-    "details": "Completed Secondary School Certificate from Rajuk Uttara Model College, Dhaka."
-  },
-  {
-    "id": 22,
-    "company": "Technical Skills Inventory",
-    "year": "2025",
-    "title": "Full Stack Development & UI/UX",
-    "slug": "key-skills",
-    "results": [
-      "Frontend: React, Next.js, TypeScript",
-      "Backend: Node.js, Express, MongoDB",
-      "CMS & UI: WordPress, Figma, Adobe XD"
-    ],
-    "link": "#",
-    "image": "/images/skills-inventory.png",
-    "techStack": [
-      "ReactJS",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "WordPress",
-      "Figma",
-      "Git"
-    ],
-    "details": "Comprehensive expertise in the MERN stack, WordPress development, and UI/UX design. Proficient in building responsive web applications, secure backend systems, and managing content platforms with a focus on leadership and problem-solving."
   }
 ]

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Md. Jamil Shikder",
+    "email": "jamil@example.com",
+    "password": "jamil116",
+    "role": "Lead Developer",
+    "userType": "admin",
+    "image": "/images/team/jamil.png",
+    "bio": "Experienced Full Stack Developer specializing in MERN stack and WordPress solutions.",
+    "skills": ["MERN Stack", "WordPress", "Leadership", "System Architecture"],
+    "socials": {
+      "github": "https://github.com/developerhasan99",
+      "linkedin": "https://linkedin.com/in/developerhasan99",
+      "twitter": "#",
+      "facebook": "https://facebook.com/jswebdevs"
+    }
+  },
+  {
+    "name": "Nagib",
+    "email": "nagib@example.com",
+    "password": "jamil116",
+    "role": "Frontend Developer",
+    "userType": "developer",
+    "image": "/images/team/nagib.png",
+    "phone": "",
+    "bio": "Passionate Frontend Developer focused on creating pixel-perfect, responsive user interfaces.",
+    "skills": ["React", "Tailwind CSS", "JavaScript", "UI/UX"],
+    "socials": {
+      "github": "#",
+      "linkedin": "#",
+      "twitter": "#",
+      "facebook": "#"
+    }
+  },
+  {
+    "name": "Siyam",
+    "email": "siyam@example.com",
+    "password": "jamil116",
+    "role": "Backend Engineer",
+    "userType": "developer",
+    "image": "/images/team/siyam.png",
+    "phone": "",
+    "bio": "Backend specialist ensuring secure, scalable, and efficient server-side operations.",
+    "skills": ["Node.js", "Express", "MongoDB", "API Design"],
+    "socials": {
+      "github": "#",
+      "linkedin": "#",
+      "twitter": "#",
+      "facebook": "#"
+    }
+  }
+]

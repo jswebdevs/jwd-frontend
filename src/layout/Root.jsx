@@ -1,14 +1,17 @@
 import Footer from './Footer';
 import Header from './Header';
 import { Outlet } from 'react-router-dom';
+import { Toaster } from "react-hot-toast";
+
 
 const Root = () => {
     return (
-        <div>
-            <Header/>
-            <Outlet/>
-            <Footer/>
-        </div>
+      <div>
+        <Toaster position="top-right" reverseOrder={false} />
+        <Header />
+        <Outlet />
+        <Footer />
+      </div>
     );
 };
 

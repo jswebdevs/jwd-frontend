@@ -1,13 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { CheckCircle2, ArrowUpRight, ArrowRight } from "lucide-react";
 import { twMerge } from "tailwind-merge";
-import { Link } from "react-router-dom"; // 1. Import Link
-import projectsData from "../../assets/projects/projects.json";
+import { Link } from "react-router-dom";
+import axios from "axios"; // 1. Import Axios
 
 // Import your grain texture image here
 import grainImage from "../../assets/img/grain.jpg";
 
 const HomeProjects = () => {
+  const [projects, setProjects] = useState([]);
+
+  // 2. Fetch Data from API
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        // Make sure your backend is running on port 3000
+        const response = await axios.get("http://localhost:3000/api/projects");
+        setProjects(response.data);
+      } catch (error) {
+        console.error("Error fetching projects:", error);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
   return (
     <section id="projects" className="pb-16 lg:py-24">
       <div className="container mx-auto px-4">
@@ -28,19 +45,17 @@ const HomeProjects = () => {
         {/* --- INLINED SECTION HEADER END --- */}
 
         <div className="flex flex-col gap-20 mt-10 md:mt-20">
-          {projectsData.slice(0, 5).map((project, projectIndex) => (
+          {/* 3. Map over fetched 'projects' state */}
+          {projects.slice(0, 5).map((project, projectIndex) => (
             /* --- INLINED CARD START --- */
             <div
-              key={project.id}
-              // Merging base card styles with the specific sticky/padding styles
+              key={project._id || project.id} // Use _id from MongoDB if available
               className={twMerge(
-                // 1. Base Card Styles
                 "bg-gray-800 rounded-3xl relative overflow-hidden after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none z-0 p-6",
-                // 2. Specific styles for this section (Sticky effect + Padding)
                 "px-8 pt-8 pb-0 md:px-12 md:pt-12 lg:pt-16 lg:px-16 z-0 sticky"
               )}
               style={{
-                top: `calc(64px + ${projectIndex * 40}px)`, // Stacking effect logic
+                top: `calc(64px + ${projectIndex * 40}px)`,
               }}
             >
               {/* Background Grain Texture */}
@@ -68,15 +83,22 @@ const HomeProjects = () => {
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
 
                   <ul className="flex flex-col gap-4 mt-4 md:mt-5">
-                    {project.results.map((result, index) => (
-                      <li
-                        key={index}
-                        className="flex gap-2 text-sm text-white/50"
-                      >
-                        <CheckCircle2 className="size-5 md:size-6 text-emerald-400" />
-                        <span>{result}</span>
-                      </li>
-                    ))}
+                    {/* Ensure results is an array before mapping */}
+                    {Array.isArray(project.results) &&
+                      project.results.map((result, index) => (
+                        <li
+                          key={index}
+                          className="flex gap-2 text-sm text-white/50"
+                        >
+                          <CheckCircle2 className="size-5 md:size-6 text-emerald-400" />
+                          {/* Handle if result is string or object */}
+                          <span>
+                            {typeof result === "string"
+                              ? result
+                              : result.title || result}
+                          </span>
+                        </li>
+                      ))}
                   </ul>
 
                   <a

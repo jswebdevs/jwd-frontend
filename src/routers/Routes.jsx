@@ -9,6 +9,9 @@ import Blog from "../pages/Blog";
 import Services from "../pages/Services";
 import Reviews from "../pages/Reviews";
 import About from "../pages/About"
+import AdminRoot from "../admin/AdminRoot";
+import AdminDashboard from "../admin/AdminDashboard";
+import AdminProjects from "../admin/AdminProjects";
 
 
 const Routes = createBrowserRouter([
@@ -41,10 +44,25 @@ const Routes = createBrowserRouter([
                 path: "reviews",
                 element: <Reviews></Reviews>
             },
-          {
-            path: "about",
-            element: <About></About>
-          }
+            {
+                path: "about",
+                element: <About></About>
+            },
+
+            {
+                path: "admin",
+                element: <AdminRoot></AdminRoot>,
+                children: [
+                    {
+                        path: "dashboard",
+                        element: <AdminDashboard/>
+                    },
+                    {
+                        path: "projects",
+                        element: <AdminProjects></AdminProjects>
+                    }
+                ]
+            }
         ]
     }
 ])

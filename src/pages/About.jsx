@@ -35,7 +35,13 @@ const About = () => {
       name: "Md. Jamil Shikder",
       role: "Lead Developer",
       image: jamilImg, 
-      socials: { github: "#", linkedin: "#", twitter: "#" }
+      socials: { github: "#", linkedin: "#", twitter: "#" },
+      password: "admin",
+      email: "",
+      phone: "",
+      userType: "admin/developer/client",
+
+
     },
     {
       name: "Nagib",
