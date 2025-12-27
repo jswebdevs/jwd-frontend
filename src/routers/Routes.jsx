@@ -8,7 +8,7 @@ import Projects from "../pages/Projects";
 import Blog from "../pages/Blog";
 import Services from "../pages/Services";
 import Reviews from "../pages/Reviews";
-import AboutPage from "../pages/About";
+import About from "../pages/About";
 
 const Routes = createBrowserRouter([
     {
@@ -42,7 +42,7 @@ const Routes = createBrowserRouter([
             },
             {
                 path: "about",
-                element: <AboutPage></AboutPage>
+                element: <About></About>
             }
         ]
     }
