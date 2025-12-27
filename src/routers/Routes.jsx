@@ -5,7 +5,10 @@ import Root from "../layout/Root";
 import Home from "../pages/Home";
 import Contact from "../pages/Contact";
 import Projects from "../pages/Projects";
-import About from "../pages/About";
+import Blog from "../pages/Blog";
+import Services from "../pages/Services";
+import Reviews from "../pages/Reviews";
+import AboutPage from "../pages/About";
 
 const Routes = createBrowserRouter([
     {
@@ -26,9 +29,21 @@ const Routes = createBrowserRouter([
                 element: <Projects></Projects>
             },
             {
-                path: "about",
-                element: <About></About>
+                path: "blog",
+                element: <Blog></Blog>
             },
+            {
+                path: "services",
+                element: <Services></Services>
+            },
+            {
+                path: "reviews",
+                element: <Reviews></Reviews>
+            },
+            {
+                path: "about",
+                element: <AboutPage></AboutPage>
+            }
         ]
     }
 ])

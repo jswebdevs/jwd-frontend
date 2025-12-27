@@ -74,9 +74,9 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-6">
-                        <ContactItem icon={Phone} title="Phone" content="+880 1234 567890" />
+                        <ContactItem icon={Phone} title="Phone" content="01881176704" />
                         <ContactItem icon={Mail} title="Email" content="hello@example.com" />
-                        <ContactItem icon={MapPin} title="Office" content="Dhaka, Bangladesh" />
+                       
                     </div>
 
                     {/* Social Links with Facebook */}
