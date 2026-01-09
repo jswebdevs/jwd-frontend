@@ -158,7 +158,7 @@ const AdminProjects = () => {
           No projects found.
         </p>
         <Link
-          to="/admin/manage-projects/add"
+          to="/admin/projects/add"
           className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
         >
           Add New Project
@@ -173,7 +173,7 @@ const AdminProjects = () => {
         <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl">Projects</h2>
             <button
-              onClick={() => navigate("/admin/manage-projects/add")}
+              onClick={() => navigate("/admin/projects/add")}
               className="ml-auto bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors">Add a Project</button>
         </div>
 

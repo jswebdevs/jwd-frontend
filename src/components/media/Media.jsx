@@ -36,7 +36,7 @@ const Media = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white font-semibold rounded-xl shadow-lg shadow-blue-600/30 transition-all duration-300 flex items-center gap-2"
-              onClick={() => navigate("/admin/site-settings/media/upload")}
+              onClick={() => navigate("/admin/media/upload")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

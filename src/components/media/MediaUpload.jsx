@@ -83,7 +83,7 @@ const MediaUpload = () => {
         setUploading(false);
         setFiles([]);
         setProgress({});
-        navigate("/admin/site-settings/media");
+        navigate("/admin/media");
       }, 500);
     } catch (err) {
       console.error("Upload failed:", err);
@@ -116,7 +116,7 @@ const MediaUpload = () => {
               </p>
             </div>
             <button
-              onClick={() => navigate("/admin/site-settings/media")}
+              onClick={() => navigate("/admin/media")}
               className="text-sm font-medium text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors"
             >
               Cancel & Go Back
