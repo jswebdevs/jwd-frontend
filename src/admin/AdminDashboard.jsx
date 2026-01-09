@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   LayoutDashboard, 
   Briefcase, 
@@ -13,12 +13,21 @@ import {
 
 const AdminDashboard = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
-  
-  // ডামি ডাটা (আপনার ডাটাবেস থেকে এগুলো আসবে)
+  const [projects, setProjects] = useState([]);
+
+  useEffect(()=>{
+    fetch('https://backend.jswebdevs.com/api/projects')
+      .then(res => res.json())
+      .then(data => setProjects(data))
+      .catch(err => console.error('Error fetching projects:', err));
+  }, []);
+
+  const length = projects.length;
+
   const stats = [
-    { title: "Total Projects", count: 120, icon: <Briefcase size={24} />, color: "bg-blue-500" },
+    { title: "Total Projects", count: length, icon: <Briefcase size={24} />, color: "bg-blue-500" },
     { title: "Active Services", count: 8, icon: <Settings size={24} />, color: "bg-purple-500" },
-    { title: "Team Members", count: 24, icon: <Users size={24} />, color: "bg-green-500" },
+    { title: "Team Members", count: 3, icon: <Users size={24} />, color: "bg-green-500" },
     { title: "Unread Messages", count: 15, icon: <MessageSquare size={24} />, color: "bg-orange-500" },
   ];
 
