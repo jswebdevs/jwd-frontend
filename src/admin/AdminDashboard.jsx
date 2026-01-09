@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { 
-  LayoutDashboard, 
   Briefcase, 
   Users, 
   MessageSquare, 
   Settings, 
-  Menu,
-  X,
   Search,
   Bell
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AdminDashboard = () => {
-  const [isSidebarOpen, setSidebarOpen] = useState(true);
+
   const [projects, setProjects] = useState([]);
 
   useEffect(()=>{
@@ -32,34 +30,16 @@ const AdminDashboard = () => {
   ];
 
   return (
-    <div className="flex h-screen bg-gray-100 font-sans">
+    <div className="flex h-screen bg-gray-100 font-sans w-full dark:bg-gray-700">
       
-      {/* --- SIDEBAR --- */}
-      <div className={`${isSidebarOpen ? 'w-64' : 'w-20'} bg-white shadow-lg transition-all duration-300 flex flex-col`}>
-        <div className="p-4 flex items-center justify-between border-b">
-          <h1 className={`font-bold text-xl text-blue-600 ${!isSidebarOpen && 'hidden'}`}>AdminPanel</h1>
-          <button onClick={() => setSidebarOpen(!isSidebarOpen)} className="p-1 hover:bg-gray-100 rounded">
-            {isSidebarOpen ? <X size={20}/> : <Menu size={20}/>}
-          </button>
-        </div>
-
-        <nav className="flex-1 p-4 space-y-2">
-          <SidebarItem icon={<LayoutDashboard size={20} />} text="Dashboard" active isOpen={isSidebarOpen} />
-          <SidebarItem icon={<Briefcase size={20} />} text="Projects" isOpen={isSidebarOpen} />
-          <SidebarItem icon={<Settings size={20} />} text="Services" isOpen={isSidebarOpen} />
-          <SidebarItem icon={<Users size={20} />} text="Team" isOpen={isSidebarOpen} />
-          <SidebarItem icon={<MessageSquare size={20} />} text="Chat / Messages" isOpen={isSidebarOpen} />
-        </nav>
-      </div>
-
       {/* --- MAIN CONTENT --- */}
       <div className="flex-1 overflow-y-auto">
         
         {/* Header */}
-        <header className="bg-white p-4 shadow-sm flex justify-between items-center sticky top-0 z-10">
-          <div className="flex items-center bg-gray-100 rounded-lg px-3 py-2 w-64">
-            <Search size={18} className="text-gray-500 mr-2" />
-            <input type="text" placeholder="Search..." className="bg-transparent outline-none text-sm w-full" />
+        <header className="bg-white dark:bg-gray-700 p-4 shadow-sm flex justify-between items-center sticky top-0 z-10">
+          <div className="flex items-center bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2 w-64 relative border-1">
+            <Search size={18} className="text-gray-500 dark:text-white absolute" />
+            <input type="text" placeholder="Search..." className="bg-transparent text-sm outline-none w-full ms-5" />
           </div>
           <div className="flex items-center gap-4">
             <button className="relative p-2 hover:bg-gray-100 rounded-full">
@@ -156,15 +136,7 @@ const AdminDashboard = () => {
 
 // --- Helper Components ---
 
-const SidebarItem = ({ icon, text, active, isOpen }) => (
-  <div className={`
-    flex items-center p-3 rounded-lg cursor-pointer transition-colors
-    ${active ? 'bg-blue-50 text-blue-600' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'}
-  `}>
-    {icon}
-    <span className={`ml-3 font-medium transition-all duration-300 ${!isOpen && 'hidden'}`}>{text}</span>
-  </div>
-);
+
 
 const ChatMessage = ({ name, msg, time, isMe }) => (
   <div className={`flex flex-col ${isMe ? 'items-end' : 'items-start'}`}>

@@ -5,7 +5,7 @@ import AdminDashboard from './AdminDashboard';
 
 const AdminRoot = () => {
     return (
-        <div>
+        <div className='flex'>
             <AdminMenu></AdminMenu>
             <Outlet></Outlet>
         </div>
