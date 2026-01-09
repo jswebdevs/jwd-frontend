@@ -20,7 +20,7 @@ const MediaUpload = () => {
   const fileInputRef = useRef(null);
   const navigate = useNavigate();
 
-  const UPLOAD_URL = "https://backend.vertexforbcs.org/api/media";
+  const UPLOAD_URL = "https://backend.jswebdevs.com/api/media";
 
   const formatSize = (bytes) => {
     const mb = bytes / (1024 * 1024);

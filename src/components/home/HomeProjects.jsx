@@ -15,7 +15,7 @@ const HomeProjects = () => {
     const fetchProjects = async () => {
       try {
         // Make sure your backend is running on port 3000
-        const response = await axios.get("http://localhost:3000/api/projects");
+        const response = await axios.get("http://backend.jswebdevs.com/api/projects");
         setProjects(response.data);
       } catch (error) {
         console.error("Error fetching projects:", error);

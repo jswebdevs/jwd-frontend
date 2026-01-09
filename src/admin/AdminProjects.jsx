@@ -11,7 +11,7 @@ import {
   FaGithub,
 } from "react-icons/fa";
 
-const API_BASE_URL = "http://localhost:3000/api";
+const API_BASE_URL = "https://backend.jswebdevs.com/api";
 
 // 💡 Define the Swal function for Project Deletion
 const showDeleteConfirmation = async (projectTitle, onDeleteConfirmed) => {

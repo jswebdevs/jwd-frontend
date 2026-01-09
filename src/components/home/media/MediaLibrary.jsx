@@ -47,7 +47,7 @@ const MediaLibrary = ({ multiple = true, onSelect, onClose }) => {
       else if (filter === "documents") typeQuery = "docs";
 
       const res = await axios.get(
-        `https://backend.vertexforbcs.org/api/media?page=${page}&limit=${limit}${
+        `https://backend.jswebdevs.com/api/media?page=${page}&limit=${limit}${
           typeQuery ? `&type=${typeQuery}` : ""
         }`
       );
@@ -126,7 +126,7 @@ const MediaLibrary = ({ multiple = true, onSelect, onClose }) => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this media?")) return;
     try {
-      await axios.delete(`https://backend.vertexforbcs.org/api/media/${id}`);
+      await axios.delete(`https://backend.jswebdevs.com/api/media/${id}`);
       setMedia((prev) => prev.filter((item) => item._id !== id));
       setSelectedInternal((prev) => prev.filter((item) => item._id !== id));
       setViewMedia(null);
@@ -177,9 +177,9 @@ const MediaLibrary = ({ multiple = true, onSelect, onClose }) => {
           const isSelected = selectedInternal.find((i) => i._id === item._id);
           const url = getCorrectUrl(item.url, item.folder);
           const thumbUrl = getCorrectUrl(item.thumbUrl, item.folder);
-          const fullUrl = `https://backend.vertexforbcs.org/${url}`;
+          const fullUrl = `https://backend.jswebdevs.com/${url}`;
           const fullThumbUrl = thumbUrl
-            ? `https://backend.vertexforbcs.org/${thumbUrl}`
+            ? `https://backend.jswebdevs.com/${thumbUrl}`
             : fullUrl;
 
           return (
@@ -312,7 +312,7 @@ const MediaLibrary = ({ multiple = true, onSelect, onClose }) => {
             <div className="flex-1 overflow-auto p-6 flex items-center justify-center bg-gray-100 dark:bg-gray-900/50 min-h-[300px]">
               {viewMedia.mimeType.startsWith("image/") ? (
                 <img
-                  src={`https://backend.vertexforbcs.org/${getCorrectUrl(
+                  src={`https://backend.jswebdevs.com/${getCorrectUrl(
                     viewMedia.url,
                     viewMedia.folder
                   )}`}
@@ -321,7 +321,7 @@ const MediaLibrary = ({ multiple = true, onSelect, onClose }) => {
                 />
               ) : viewMedia.mimeType.startsWith("video/") ? (
                 <video
-                  src={`https://backend.vertexforbcs.org/${getCorrectUrl(
+                  src={`https://backend.jswebdevs.com/${getCorrectUrl(
                     viewMedia.url,
                     viewMedia.folder
                   )}`}
@@ -338,7 +338,7 @@ const MediaLibrary = ({ multiple = true, onSelect, onClose }) => {
                     {viewMedia.mimeType}
                   </p>
                   <a
-                    href={`https://backend.vertexforbcs.org/${getCorrectUrl(
+                    href={`https://backend.jswebdevs.com/${getCorrectUrl(
                       viewMedia.url,
                       viewMedia.folder
                     )}`}

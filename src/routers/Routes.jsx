@@ -12,6 +12,7 @@ import About from "../pages/About"
 import AdminRoot from "../admin/AdminRoot";
 import AdminDashboard from "../admin/AdminDashboard";
 import AdminProjects from "../admin/AdminProjects";
+import Login from "../admin/Login";
 
 
 const Routes = createBrowserRouter([
@@ -47,6 +48,10 @@ const Routes = createBrowserRouter([
             {
                 path: "about",
                 element: <About></About>
+            },
+            {
+                path: "login",
+                element: <Login></Login>
             },
 
             {
